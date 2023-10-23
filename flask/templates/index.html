@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title1 %} Home {% endblock %}
+{% block title2 %} Home {% endblock %}
+
+{% block content %}
+<div class="float-container">
+  <div class="card-panel content-card small-left float-child z-depth-3">
+    <p>A wearable sensor that can detect how much UV the wearer is exposed to and sends a log to the website, where the
+      person can check to see how much UV radiation he/she has been exposed to. The website will offer information on
+      safety precautions that he/she can take and set a daily UV exposure limit based on the UV index. This product is
+      perfect for those looking to maintain healthy skin and monitor their UV radiation exposure.
+    </p>
+  </div>
+
+  <div class="card-panel content-card large-right float-child z-depth-3">
+    <img src="{{ url_for('static', filename='image/uv360.gif') }}"/>
+  </div>
+</div>
+
+
+{% endblock %}

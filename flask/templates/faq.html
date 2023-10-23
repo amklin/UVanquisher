@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title1 %} FAQs {% endblock %}
+{% block title2 %} FAQs {% endblock %}
+
+{% block content %}
+
+<ul class="collapsible">
+  <li>
+    <div class="collapsible-header">My UV sensor isn't working properly. What am I doing wrong?</div>
+    <div class="collapsible-body"><span>The most common source of issue with new users is improper orientation of the
+        wearable sensor. Make sure that the UV sensor can make direct contact with the sunlight for the best and most
+        accurate results.</span></div>
+  </li>
+
+  <li>
+    <div class="collapsible-header">What is UV radiation?</div>
+    <div class="collapsible-body"><span>UV radiation is a form of energy emitted by the sun, coming in three types, UVA,
+        UVB, and UVC, that differ in energy levels. Because the UVC and UVB are mostly absorbed by the ozone layer, UVA
+        is the most prevalent to our daily lives. UV radiation is known to damage DNA in the body's cells, primarily
+        skin cells. For more information, click <a
+          href="https://www.cancer.org/healthy/cancer-causes/radiation-exposure/uv-radiation.html" target="_blank">here</a>.</span>
+        <img src="{{ url_for('static', filename='image/uv_rays.webp') }}"/>
+        <!--image source: https://cdn.shopify.com/s/files/1/0277/3201/7249/files/UV_rays_1024x1024.png?v=1624465504-->
+    </div>
+  </li>
+
+  <li>
+    <div class="collapsible-header">Why is UV radiation dangerous?</div>
+    <div class="collapsible-body"><span>Extended exposure to UV radiation can lead to an abundance of health issues.
+        Obviously, it can cause skin-related issues, including premature aging, wrinkles, sunburn, actinic keratosis,
+        and solar elastosis. Most notoriously, UV radiation is known to cause skin cancer.</span></div>
+  </li>
+
+  <li>
+    <div class="collapsible-header">What do the numbers mean?</div>
+    <div class="collapsible-body"><span>As stated by the EPA, the UV index scale is divided into 5 exposure categories:
+        low, moderate, high, very high, and extreme. Low exposure (&#60;2) means that being outside in the sunlight is
+        very safe. Moderate exposure (3-5) means that being outside in the sunlight is still relatively safe, but you
+        should take precautions like wearing a hat, sunglasses, and sunscreen. High exposure (6-7) means that protection
+        against exposure is needed. Very high and extreme exposure (8-11 & 11+) are very similar in the way that being
+        outside during the day is incredibly dangerous and should be avoided if possible, even with adequate
+        protection.</span>
+        <img src="{{ url_for('static', filename='image/uv_index.jpg') }}"/>
+        <!--image source: https://www.myuv.com.au/wp-content/uploads/2021/12/UV-Index-foco-e1640070883585.jpg-->
+      </div>
+  </li>
+
+  <li>
+    <div class="collapsible-header">What is skin cancer?</div>
+    <div class="collapsible-body"><span>Skin cancer is characterized by abnormal growth of skin cells. Generally, this
+        will occur in places that are most often exposed to UV radiation, but it can also appear in other places. For
+        more information on skin cancer, click <a
+          href="https://www.mayoclinic.org/diseases-conditions/skin-cancer/symptoms-causes/syc-20377605" target="_blank">here</a>.</span>
+    </div>
+  </li>
+
+  <li>
+    <div class="collapsible-header">When am I at risk for skin cancer?</div>
+    <div class="collapsible-body"><span>Cumulative and extensive sun exposure at high UV levels raise your risk of
+        developing skin cancer drastically. Furthermore, people with fair complexions are often at an even greater risk
+        for skin cancer. When reading your logged data, you should aim to reduce exposure.</span></div>
+  </li>
+</ul>
+
+{% endblock %}

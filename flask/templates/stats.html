@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title1 %} Stats {% endblock %}
+{% block title2 %} Stats {% endblock %}
+
+{% block content %}
+
+      <div class="float-container">
+
+        <div class="card-panel content-card small-mid float-child z-depth-3">
+          <p id = "welcome-message">
+            Sorry, this page can only be accessed by signed-in users. Please sign in or create an account.
+          </p>
+        </div>
+
+        <div class="card-panel content-card small-mid float-child z-depth-3 sign-in-req" id="data-btn-div">
+          <a class="btn waves-effect waves-blue" id="data-collection-btn">Start Data Collection</a>
+          
+        </div>
+
+        <div class="card-panel content-card med-mid float-child z-depth-3 sign-in-req" id="uv-index-msg-div">
+          <p id="uv-index-message">No data found.</p>
+        </div>
+
+        <div class="card-panel content-card small-mid float-child z-depth-3 input-field sign-in-req" id="dropdown-menu">
+            <select id="dataset-options">
+              <option value="none" disabled selected>Choose your dataset:</option>
+            </select>
+            <a class="btn waves-effect waves-blue" id="refresh-dataset-btn">Refresh Datasets</a>
+        </div>
+        
+        <div class="card-panel content-card large-mid float-child z-depth-3 sign-in-req" id="graph-card">
+          <canvas id="statsGraph"></canvas>
+        </div>
+
+        <div class="card-panel content-card large-mid float-child z-depth-3 sign-in-req" id="sum-graph-card">
+          <canvas id="statsSumGraph"></canvas>
+        </div>
+        
+        <audio id="alert_audio">
+          <source src="{{ url_for('static', filename='sound/alert_sound.wav') }}" type="audio/wav">
+        Your browser does not support the audio element.
+        </audio>
+
+      </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title1 %} Sign In {% endblock %}
+{% block title2 %} Sign In {% endblock %}
+
+{% block content %}
+
+      <div class="float-container">
+
+        <div class="card-panel content-card med-right float-child z-depth-3" id="sign-up-form">
+          <!--sign up -->
+          <h1>Sign Up</h1>
+          <form>
+            <div class="input-field">
+              <input type="email" id="email-sign-up" onblur="emailVerification()">
+              <label for="email-sign-up">Email</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="password-sign-up" onblur="signUpButton()">
+              <label for="password-sign-up">Password</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="password-confirm-sign-up" onblur="passwordVerification()">
+              <label for="password-confirm-sign-up">Confirm Password</label>
+              <span class="helper-text" id ="sign-up-error"></span>
+            </div>
+          </form>
+  
+          <a href="#!" class="waves-effect waves-red btn-flat action-btn" id="sign-up-btn">Sign Up</a>
+        </div>
+
+        <!--sign in -->
+        <div class="card-panel content-card med-left float-child z-depth-3" id="sign-in-form">
+          <h1>Sign in</h1>
+          <form>
+            <div class="input-field">
+              <input type="email" id="email-sign-in" onblur="signInButton()">
+              <label for="email-sign-in">Email</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="password-sign-in" onblur="signInButton()">
+              <label for="password-sign-in">Password</label>
+              <span class="helper-text" id="sign-in-error"></span>
+            </div>
+          </form>
+
+          <a href="#!" class="waves-effect waves-red btn-flat action-btn" id="sign-in-btn">Sign In</a>
+        </div>
+      </div>
+
+{ % endblock %}

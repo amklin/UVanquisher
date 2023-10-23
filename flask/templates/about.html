@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title1 %} About {% endblock %}
+{% block title2 %} About {% endblock %}
+
+{% block content %}
+
+<div class="float-container">
+  <div class="card-panel content-card large-left float-child z-depth-3">
+    <h3>About the Design:</h3>
+
+    <p>Our design utilizes the Adafruit SI1145 Digital UV Index / IR / Visible Light Sensor to calculate UV index. The
+      circuitry is powered by a mini solar panel, which gives the product an inexhaustible source of energy and
+      eliminates the worry of running out of battery in the middle of the day. These two components are oriented towards
+      the top of the head to produce the most possible contact with sunlight for highest accuracy in results. The
+      stretchy headband allows you to adjust the size to perfectly fit your uniquely-shaped head while fashionably
+      containing the wires. Furthermore, the 3D-printed component holders and caps give the product the structural
+      integrity needed to resist daily wear and tear. </p>
+
+      <img class="side-by-side-img" src="{{ url_for('static', filename='image/sensor_img_1.png') }}"/>
+      <img class="side-by-side-img" src="{{ url_for('static', filename='image/sensor_img_2.png') }}"/>
+
+      <h3>
+        About the Team:
+      </h3>
+  
+      <p>
+        The UVanquisher team is composed of two subgroups: BME and CSE. Both groups worked in tandem with each other to
+        bring you this wearable sensor product. Our goal is to make anti-UV exposure technology accessible to all across
+        the globe and eventually make a significant contribution by decreasing the incidence and death rate of skin
+        cancer.
+      </p>
+  
+      <ul>
+        <li:>
+          <strong>BME</strong> - The BME group mainly focused on the design of the product. The team was composed of two
+          members: Greg and Jerry.
+        </li:>
+        <li>
+          <strong>CSE</strong> - The CSE group mainly focused on the functionality of the website and circuitry. The team
+          was composed of two members: Amanda and Joy.
+        </li>
+      </ul>
+  </div>
+  <div class="card-panel content-card small-right float-child z-depth-3">
+    <img src="{{ url_for('static', filename='image/greg_head.gif') }}"/>
+  </div>
+
+  
+</div>
+
+  {% endblock %}

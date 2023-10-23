@@ -1,0 +1,359 @@
+/*CSS rules are orgnaized thematically. First are more general rules regarding the whole site, 
+followed by page-specific or feature-specific rules. At the end are the media queries.*/
+
+:root {
+    --orange-1: #ffb73c;
+    --orange-2: #F08700;
+    
+    --yellow-1: #f2ebcc;
+    --yellow-2: #FDF0B0;
+    --yellow-3: #ffd791;
+
+    --blue-1: #DEF0F7;
+    --blue-2: #BBDEF0;
+    --blue-3: #8CCAE3;
+    --blue-4: #008F8F;
+
+    --white: #ffffff;
+    --grey: #454545;
+    --black: #000;
+
+    --heading-size: 10rem;
+}
+
+/* General rules*/
+body {
+    background-color: var(--white);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    margin: 0 1rem;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/*header */
+
+/* nav bar*/
+.nav-wrapper {
+    /*The entire nav bar*/
+    background-color: var(--white);
+    color: var(--blue-3);
+
+}
+
+.nav-wrapper li {
+    /*The company name and logo*/
+    background-color: var(--orange-2);
+    color: var(--white);
+}
+
+.nav-wrapper li a {
+    /*The links on the nav bar*/
+    background-color: var(--white);
+    color: var(--orange-2);
+}
+
+.nav-wrapper li.active a {
+    background-color: var(--blue-2);
+}
+
+.nav-wrapper li.active a:hover {
+    background-color: var(--blue-3);
+}
+
+.nav-wrapper li a:hover {
+    background-color: var(--blue-3);
+}
+
+.nav-wrapper .website-name {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+
+.nav-wrapper .login-btns {
+    background-color: var(--orange-1);
+    color: var(--grey);
+}
+
+.nav-wrapper .login-btns:hover {
+    background-color: var(--blue-1);
+}
+
+.login-btns#sign-up {
+    position: absolute;
+    right: 7em;
+    top: 15px;
+}
+
+.login-btns#sign-in {
+    position: absolute;
+    right: 0em;
+    top: 15px;
+}
+
+.login-btns#sign-out-btn {
+    position: absolute;
+    right: 0em;
+    top: 15px;
+
+}
+
+/* Sign in/up forms*/
+
+/* label color */
+#sign-in-form .input-field label,
+#sign-up-form .input-field label {
+    color: var(--grey);
+}
+
+/* label underline color */
+#sign-in-form .input-field input,
+#sign-up-form .input-field input {
+    border-bottom: 1px solid var(--orange-1);
+    box-shadow: 0 1px 0 0 var(--yellow-3);
+}
+
+/* label focus color */
+#sign-in-form .input-field input:focus+label,
+#sign-up-form .input-field input:focus+label {
+    color: var(--black);
+}
+
+/* label underline focus color */
+#sign-in-form .input-field input:focus,
+#sign-up-form .input-field input:focus {
+    border-bottom: 1px solid var(--orange-2);
+    box-shadow: 0 1px 0 0 var(--orange-2);
+}
+
+/* invalid label underline color */
+#sign-in-form .input-field input.invalid,
+#sign-up-form .input-field input.invalid {
+    border-bottom: 1px solid var(--yellow-3);
+    box-shadow: 0 1px 0 0 var(--orange-2);
+}
+
+/* invalid label underline focus color */
+#sign-in-form .input-field input:focus.invalid,
+#sign-up-form .input-field input:focus.invalid {
+    border-bottom: 1px solid var(--yellow-3);
+    box-shadow: 0 1px 0 0 var(--orange-2);
+}
+
+.action-btn {
+    background-color: var(--orange-1);
+    color: var(--grey);
+}
+
+.helper-text#sign-up-error,
+.helper-text#sign-in-error {
+    color: var(--orange-2);
+}
+
+/* heading */
+
+header .card-panel.heading {
+    width: 100%;
+    margin: 0 auto 1rem;
+    min-height: calc(100vh - 64px);
+    background-image: url('../image/skytimelapse.gif') ;
+}
+
+header .card-panel.heading h1 {
+    color: var(--orange-2);
+    text-align: center;
+    margin-top: calc((100vh - 128px - var(--heading-size))/2);
+    font-size: var(--heading-size);
+}
+
+/*Page content*/
+
+.content .content-card {
+    background-color: var(--yellow-3);
+    color: var(--grey);
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.float-child {
+    float: left;
+}
+
+.content-card.large-left {
+    width: 60%;
+    margin-right: 1%;
+    background-color: var(--yellow-1)
+}
+
+.content-card.large-right {
+    width: 60%;
+    margin-left: 1%;
+    background-color: var(--orange-1)
+}
+
+.content-card.large-mid {
+    width: 80%;
+    margin: 1rem 10%;
+}
+
+.content-card.med-left {
+    width: 48%;
+    margin-right: 1%;
+    background-color: var(--blue-1);
+}
+
+.content-card.med-right {
+    width: 48%;
+    margin-left: 1%;
+    background-color: var(--blue-2);
+}
+
+.content-card.med-mid {
+    width: 60%;
+    margin: 1rem 20%;
+}
+
+.content-card.small-left {
+    width: 38%;
+    margin-right: 1%;
+    background-color: var(--yellow-1)
+}
+
+.content-card.small-right {
+    width: 38%;
+    margin-left: 1%;
+    background-color: var(--yellow-3)
+}
+
+.content-card.small-mid {
+    width: 38%;
+    margin: 1rem 31%;
+}
+
+.content-card img {
+    width: 100%;
+}
+
+.content-card img.side-by-side-img {
+    width: 49%;
+}
+
+/* faqs */
+
+.collapsible .collapsible-header {
+    background-color: var(--blue-3);
+}
+
+.collapsible .collapsible-header.active {
+    background-color: var(--blue-2);
+}
+
+.collapsible .collapsible-body {
+    background-color: var(--blue-1);
+}
+
+.collapsible .collapsible-body img{
+    max-width: 75%;
+    margin: 1rem auto;
+}
+
+/*graphs*/
+
+.orange-highlight {
+    background-color: var(--orange-2);
+    font-weight: bold;
+}
+
+.blue-highlight {
+    background-color: var(--blue-3);
+}
+
+.sign-in-req {
+    display: block;
+}
+
+#data-collection-btn, #refresh-dataset-btn {
+    background-color: var(--blue-4);
+    margin: auto 30%;
+}
+
+#dropdown-menu,
+#graph-card,
+#sum-graph-card {
+    display: none;
+}
+
+#statsGraph,
+#statsSumGraph {
+    width: 100%;
+    background-color: var(--white)
+}
+
+.toast {
+    background-color: var(--orange-2);
+}
+
+/*footer*/
+.page-footer {
+    background-color: var(--orange-1);
+    padding: 0 1rem;
+}
+
+/*Media queries*/
+
+/*small screens*/
+@media only screen and (max-width: 480px) {
+    #collapsible-faq {
+        margin: 1rem 0 0 0;
+    }
+}
+
+/*medium and small screens*/
+@media only screen and (max-width : 992px) {
+    body {
+        padding-left: 0;
+    }
+
+    .header-img {
+        opacity: 0.4;
+        z-index: 0;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .login-btns#sign-up {
+        position: absolute;
+        right: 7em;
+        top: 70px;
+    }
+
+    .login-btns#sign-in {
+        position: absolute;
+        right: 0em;
+        top: 70px;
+    }
+
+    .login-btns#sign-out-btn {
+        position: absolute;
+        right: 0em;
+        top: 70px;
+    }
+
+    .content-card {
+        width: 100% !important;
+        margin: 1rem 0 !important;
+    }
+
+}
